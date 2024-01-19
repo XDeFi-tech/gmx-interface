@@ -13,6 +13,7 @@ import {
   imTokenWallet,
   zerionWallet,
   okxWallet,
+  xdefiWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { arbitrum, arbitrumGoerli, avalanche, avalancheFuji } from "wagmi/chains";
@@ -48,6 +49,7 @@ const recommendedWalletList: WalletList = [
     groupName: "Recommended",
     wallets: [
       injectedWallet({ chains }),
+      xdefiWallet({ chains }),
       safeWallet({ chains }),
       rabbyWallet({ chains }),
       metaMaskWallet({ chains, projectId: WALLET_CONNECT_PROJECT_ID }),
